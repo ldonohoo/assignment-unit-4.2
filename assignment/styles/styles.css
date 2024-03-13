@@ -60,9 +60,6 @@ body.random-theme {
 }
 
 header {
-    /* added this first background color to fool test which 
-    is checking for rgb color */
-    background-color: green;
     background-color: var(--main-background-color);
     color: var(--main-text-color-1);
 }
