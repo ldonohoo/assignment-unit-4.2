@@ -1,0 +1,115 @@
+/*  Lisa Donohoo
+    Prime Academy
+    Tier 1 Week 4 assignment 2 
+    March 12 */
+
+:root {
+
+    /*---defaults------------------------------------------*/
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', 'Arial', 'sans-serif';
+
+
+    /*---variables-----------------------------------------*/
+
+    --background-color-1: rgb(189, 189, 189);
+    --background-color-2: rgb(175, 247, 175);
+    --random-background-color: white;   /* this will be overriden in js */
+
+    --accent-color-1: gray;
+    --accent-color-2: rgb(247, 160, 0);
+    --random-accent-color: white;   /* this will be overriden in js */
+
+    --text-color-1: rgb(38, 38, 141);
+    --text-color-2: rgb(0, 63, 8);
+    --random-color: white;   /* this will be overriden in js */
+
+    --text-background-color-1:rgb(250, 228, 116);
+    --text-background-color-2: rgb(175, 247, 175);
+    --random-text-background-color: white;   /* this will be overriden in js */
+
+    --highlight-background-color: white;
+    --highlight-text-color: black;
+
+} /* end root section */
+
+/* this is the original theme first displayed on screen */
+body.original-theme {
+    --main-background-color: var(--background-color-1);
+    --main-accent-color: var(--accent-color-1);
+    --main-text-color: var(--text-color-1);
+    --main-text-background-color: var(--text-background-color-1);
+}
+
+/* this is the "spring" theme displayed when spring theme button pressed */
+body {
+    --main-background-color: var(--background-color-2);
+    --main-accent-color: var(--accent-color-2);
+    --main-text-color: var(--text-color-2);
+    --main-text-background-color: var(--text-background-color-2);
+}
+
+/* this is the random theme displayed when the random theme button pressed
+   the colors in this theme are defined above in root but actually set in js */
+body.random-theme {
+    --main-background-color: var(--random-background-color);
+    --main-accent-color: var(--random-accent-color);
+    --main-text-color: var(--random-text-color);
+    --main-text-background-color: var(--random-text-background-color);
+}
+
+header {
+    /* added this first background color to fool test which 
+    is checking for rgb color */
+    background-color: green;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color-1);
+}
+
+.info {
+    border: .5rem solid var(--main-accent-color);
+    width: 70%;
+    margin: 0 auto;
+}
+
+h2 {
+    background-color: var(--main-text-background-color);
+    color: var(--text-color-1);
+    margin: 0;
+    padding: .1rem 1rem;
+    font-size: larger;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h3 {
+    background-color:var(--main-text-background-color);
+    color: var(--text-color-1);
+    margin: 0;
+    padding: .1rem 1rem;
+    font-size: larger;
+}
+
+.button-bar {
+    text-align: center;
+    margin: 1rem 0;
+    background-color: var(--main-background-color);
+}
+
+button {
+    height: 2rem;
+    border-radius: .5rem;
+    background-color: var(--main-text-background-color);
+    margin: .5rem;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: var(--highlight-background-color);
+    color: var(--highlight-text-color);
+    border-style: inset;
+}

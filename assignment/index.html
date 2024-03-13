@@ -9,14 +9,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.7/chai.min.js" integrity="sha512-Pwgr3yHn4Gvztp1GKl0ihhAWLZfqgp4/SbMt4HKW7AymuTQODMCNPE7v1uGapTeOoQQ5Hoz367b4seKpx6j7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Create and link a CSS file! -->
-
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <script src="scripts/html-css-practice4_2.js" defer></script>
   </head>
-  <body>
-    <h1>Unit 4, Part 2: HTML/CSS Practice</h1>
-    <p>See console for output. <a href="">Refresh</a> the page to re-run tests.</p>
-
-
-
+  <!-- body class controls color theme, set to original theme to start -->
+  <body class="original-theme">
+    <header>
+      <h1>Unit 4, Part 2: HTML/CSS Practice</h1>
+      <p>See console for output. <a href="">Refresh</a> the page to re-run tests.</p>
+    </header>
+    <main>
+      <div class="info">
+            <h2> My name is Lisa... </h2>
+            <img class="car" src="images/nissan_altima_2017.jpeg" alt="Picture of a white Nissan Altima 2017"/>
+            <h3>...and I drive an awesome used 2017 Nissan Altima</h3>
+      </div>
+      <div class="button-bar">
+        <button id="spring-theme" type="button">spring theme</button>
+        <button id="random-theme" type="button">random theme</button>
+      </div>
+    </main>
     <!-- Used for automated testing -->
     <div id="mocha"></div>
     <link rel="stylesheet" href="../test/test.styles.css" />
